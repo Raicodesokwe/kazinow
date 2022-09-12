@@ -6,8 +6,7 @@ import 'package:latlong2/latlong.dart' as latLng;
 
 import '../widgets/mappage/location_marker.dart';
 
-const MAPBOX_ACCESS_TOKEN =
-    'pk.eyJ1IjoibXVyYWltYXBwZXIiLCJhIjoiY2w3eDg5YXpnMDhrODNvbXQzamduYmw5bSJ9.YdCn1YoW-mi9o9bAXMtY1A';
+const MAPBOX_ACCESS_TOKEN = '';
 const MAPBOX_STYLE = 'mapbox.mapbox-streets-v8';
 
 final _myLocation = latLng.LatLng(-1.038396, 37.072512);
