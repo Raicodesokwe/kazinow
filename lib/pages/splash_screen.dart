@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:kazinow/pages/home_page.dart';
 
 class SplashScreen extends StatefulWidget {
-  SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -55,8 +55,8 @@ class _SplashScreenState extends State<SplashScreen>
           child: SlideTransition(
             position: _animation,
             child: Container(
-              height: 150,
-              width: 150,
+              height: 180,
+              width: 180,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -69,7 +69,8 @@ class _SplashScreenState extends State<SplashScreen>
                           colors: [Colors.red, Colors.pinkAccent, Colors.blue],
                         )),
                   ),
-                  Text('Kazi',
+                  Text('Mukuru',
+                      key: const ValueKey<String>("logocontainer"),
                       style: TextStyle(
                           fontSize: 30,
                           letterSpacing: 2.5,

@@ -10,36 +10,38 @@ In this folder,we set up the screen that we shall use for the entire app which i
 
 of the app logo. It appears for 5 seconds courtesy of the Timer widget
 
-*home_page.dart*- This is the first screen that appears when the splash screen is done loading. It consists
+*home_page.dart*- This is the first screen that appears when the splash
+
+screen is done loading. The is a fade animation and scale animation upon
+ 
+initial load of the page . It consists
 
 of a customscrollview with a sliverappbar and a slivertoboxadapter. The sliverappbar is composed of a column
 
-with the logo on top, a listview containing the profile pictures of the various servicemen, and a tabbar 
+with the logo on top, a Container with the user's details such as name 
 
-displaying the discover and explore options that can be toggled. The slivertoboxadapter is composed of a 
+and account balance and a button prompting the user to send money. 
 
-textield where one can search for a serviceman and a listview of trending and recommended services nearby.
+The slivertoboxadapter consists of a textbutton 'check rates' navigating
 
-There is also a textbutton navigating one to the map page
+the user to the currency converter page and another text button 'see all'
 
-*map_page.dart*- One can navigate to this page upon pressing the open maps text button on the home page.
+prompting the user to check the entire list of transactions
 
-This page is composed of a map and a pageview displaying multiple cards of the servicemen located nearby 
+*check_rates.dart*- Consists of a textfield where the user can enter the
 
-complete with information about the servicemen. It also displays some mock locations of servicemen located
+amount he wishes to convert, a to currency actionchip and from currency 
 
-nearby
+actionchip that pops an alert dialog where the user can select the 
 
-*profile_page.dart*- This page is composed of information about the respective servicemen. On top of the
+currency he wishes to convert from and to and a clickable container that
 
-column, there is a background image and the profile pic of the serviceman is positioned at the bottom of the
+triggers the api call to convert the given currency amount
 
-image via a stack widget. We also display info such as name, description and rating of the servicemen. There
+*transactions_page.dart*- This page is composed of an fl_chart graph 
 
-is also a textbutton opening up a showmodalbottomsheet displaying the bio information of the serviceman.
+displaying the user's monthly transactions and a listview builder that 
 
-There are two button displaying info on sharing the profile or adding the serviceman to the team. This is
- 
-then followed by a staggeredgridview displaying the images of works done by the service men. There is also a
+displays listtiles containing information on the user's transactions 
 
-floatingactionbutton at the bottom of the screen prompting the user to schedule with the serviceman
+based on the transactions model file
