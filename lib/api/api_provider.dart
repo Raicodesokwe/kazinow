@@ -3,7 +3,7 @@ import 'package:kazinow/model/currency_change_model.dart';
 
 class ApiProvider {
   String baseUrl = "https://api.apilayer.com/fixer/convert";
-  String apikey = "";
+  String apikey = "gByViC7Oq7SOTMIDODocEK3kurAwPAA7";
   Response? response;
   Dio dio = Dio();
   ApiProvider(this.dio) {
